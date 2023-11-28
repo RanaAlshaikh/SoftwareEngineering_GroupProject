@@ -83,9 +83,7 @@ public class VolunteerismSystem {
         int click = input.nextInt();
         if (click == 1) {
             Administrator.displayOpportunities();
-            System.out.println("Enter the number of opprtunity you want to apply: ");
-            int num = input.nextInt();
-            student.applyForOpportunity(Administrator.Addopprtunity.get(num));
+            student.applyForOpportunity();
         }
        
         
