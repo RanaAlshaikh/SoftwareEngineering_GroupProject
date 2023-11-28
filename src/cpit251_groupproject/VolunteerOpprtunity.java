@@ -1,28 +1,46 @@
-
 package cpit251_groupproject;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-
 /**
  *
  * @author RANAA
  */
-
 public class VolunteerOpprtunity {
- private String name;
- private Date StartDate;
- private Date EndDate;
- private String time;
- private String Organization_name;
- private int Volunteers_number;
- private String location;
- 
+
+    private String name;
+    private Date StartDate;
+    private Date EndDate;
+    private String time;
+    private String Organization_name;
+    private int Volunteers_number;
+    private String location;
+    //walaa
+    private int availableSpots;
+
+    public VolunteerOpprtunity(String name, int availableSpots) {
+        this.name = name;
+        this.availableSpots = availableSpots;
+    }
+
+    public void reduceAvailableSpots() {
+        availableSpots--;
+    }
+
+    public int getAvailableSpots() {
+        return availableSpots;
+    }
+
+    public void setAvailableSpots(int availableSpots) {
+        this.availableSpots = availableSpots;
+    }
+    
+    
+    //end
 
     public VolunteerOpprtunity() {
     }
- 
 
     public VolunteerOpprtunity(String name, Date StartDate, Date EndDate, String time, String Organization_name, int Volunteers_number, String location) {
         this.name = name;
@@ -34,8 +52,6 @@ public class VolunteerOpprtunity {
         this.location = location;
     }
 
- 
- 
     public String getName() {
         return name;
     }
@@ -91,24 +107,19 @@ public class VolunteerOpprtunity {
     public void setLocation(String location) {
         this.location = location;
     }
-    
-    public void Date () {
-   
-}
+
+    public void Date() {
+
+    }
 
     @Override
     public String toString() {
-    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-    String Start_Date = dateFormat.format(StartDate);
-    String End_Date = dateFormat.format(EndDate);  
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        String Start_Date = dateFormat.format(StartDate);
+        String End_Date = dateFormat.format(EndDate);
         return "Volunteer Opprtunity " + "name: " + name + ","
-                + " StartDate: " +  Start_Date + ", EndDate: " + End_Date + ", Time: " + time + ", Organization_name: " + Organization_name + ", Volunteers_number: " + Volunteers_number + ", location: " + location + ' ';
+                + " StartDate: " + Start_Date + ", EndDate: " + End_Date + ", Time: " + time + ", Organization_name: " + Organization_name + ", Volunteers_number: " + Volunteers_number + ", location: " + location + "\n"
+                + "Available Spots: " + availableSpots + "\n";
     }
- 
- 
- 
- 
- 
- 
- 
+
 }

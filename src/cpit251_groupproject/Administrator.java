@@ -22,12 +22,17 @@ static ArrayList<VolunteerOpprtunity> Addopprtunity = new ArrayList<VolunteerOpp
         System.out.println(Addopprtunity.toString());
         System.out.println("Added Successfully \n");
     }
+     
+     //walaa 
+      public static void displayOpportunities() {
+        System.out.println("Available Opportunities:");
+        for (VolunteerOpprtunity opportunity : Addopprtunity) {
+            System.out.println(opportunity.toString());
+        }
+        System.out.println();
+    }
     
 
  
   
-    
- 
-
-    
 }
