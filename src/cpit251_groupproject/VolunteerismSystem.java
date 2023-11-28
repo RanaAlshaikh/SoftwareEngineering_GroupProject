@@ -65,8 +65,10 @@ public class VolunteerismSystem {
         int Volunteers_number = input.nextInt();
         System.out.print("Enter Location: ");
         String Location = input.next();
+        System.out.println("Enter the available spots");
+        int availableSpots=input.nextInt();
 
-        VolunteerOpprtunity volunteeropprtunity = new VolunteerOpprtunity(name, StartDate, EndDate, Time, Organization_name, Volunteers_number, Location);
+        VolunteerOpprtunity volunteeropprtunity = new VolunteerOpprtunity(name, StartDate, EndDate, Time, Organization_name, Volunteers_number, Location,availableSpots);
         Administrator.AddOpprtunity(volunteeropprtunity);
     }
 
@@ -85,9 +87,8 @@ public class VolunteerismSystem {
             int num = input.nextInt();
             student.applyForOpportunity(Administrator.Addopprtunity.get(num));
         }
-        else{
-            System.out.println("Opprtunity is not available");
-        }
+       
+        
 
     }
 

@@ -42,7 +42,7 @@ public class VolunteerOpprtunity {
     public VolunteerOpprtunity() {
     }
 
-    public VolunteerOpprtunity(String name, Date StartDate, Date EndDate, String time, String Organization_name, int Volunteers_number, String location) {
+    public VolunteerOpprtunity(String name, Date StartDate, Date EndDate, String time, String Organization_name, int Volunteers_number, String location,int availableSpots) {
         this.name = name;
         this.StartDate = StartDate;
         this.EndDate = EndDate;
@@ -50,6 +50,7 @@ public class VolunteerOpprtunity {
         this.Organization_name = Organization_name;
         this.Volunteers_number = Volunteers_number;
         this.location = location;
+        this.availableSpots= availableSpots;
     }
 
     public String getName() {
