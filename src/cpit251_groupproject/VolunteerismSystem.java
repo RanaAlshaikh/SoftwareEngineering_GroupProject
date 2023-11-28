@@ -66,14 +66,14 @@ public class VolunteerismSystem {
         System.out.print("Enter Location: ");
         String Location = input.next();
         System.out.println("Enter the available spots");
-        int availableSpots=input.nextInt();
+        int availableSpots = input.nextInt();
 
-        VolunteerOpprtunity volunteeropprtunity = new VolunteerOpprtunity(name, StartDate, EndDate, Time, Organization_name, Volunteers_number, Location,availableSpots);
+        VolunteerOpprtunity volunteeropprtunity = new VolunteerOpprtunity(name, StartDate, EndDate, Time, Organization_name, Volunteers_number, Location, availableSpots);
         Administrator.AddOpprtunity(volunteeropprtunity);
     }
 
     //walaa
-    public static void Student(Scanner input)throws ParseException {
+    public static void Student(Scanner input) throws ParseException {
         System.out.println("Enter your name: ");
         String name = input.next();
         System.out.println("Enter your ID: ");
@@ -82,11 +82,9 @@ public class VolunteerismSystem {
         System.out.println("If you want to apply for opprtunity click 1:");
         int click = input.nextInt();
         if (click == 1) {
-            Administrator.displayOpportunities();
+
             student.applyForOpportunity();
         }
-       
-        
 
     }
 
