@@ -72,7 +72,7 @@ public class Student {
     public void setAppliedOpportunities(List<VolunteerOpprtunity> appliedOpportunities) {
         this.appliedOpportunities = appliedOpportunities;
     }
-    public static void browseOpportunities(String criteria, String value) {
+    public static void browseOpportunitiesol(String criteria, String value) {
         boolean found = false;
         for (VolunteerOpprtunity opportunity : Addopprtunity) {
             switch (criteria.toLowerCase()) {
@@ -94,7 +94,7 @@ public class Student {
             System.out.println("No matching opportunities found.");
         }
     }
-    public static void searchOpportunity(String searchKeyword) {
+    public static void searchOpportunityol(String searchKeyword) {
         boolean found = false;
         for (VolunteerOpprtunity opportunity : Addopprtunity) {
             if (opportunity.getName().toLowerCase().contains(searchKeyword.toLowerCase())) {
