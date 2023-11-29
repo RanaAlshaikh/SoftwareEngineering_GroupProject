@@ -35,7 +35,19 @@ public class VolunteerismSystem {
                 }
             } else if (choose.equalsIgnoreCase("SI")) {
                 System.out.println("Welcom Back");
-            } else {
+            }
+             else if (choose.equalsIgnoreCase("SEARCH")) {
+                System.out.print("Enter the keyword to search for opportunities: ");
+                String searchKeyword = input.next();
+                Student.searchOpportunity(searchKeyword);
+            }else if (choose.equalsIgnoreCase("BROWSE")) {
+                System.out.print("Enter the criteria (organization/available spots): ");
+                String criteria = input.next();
+                System.out.print("Enter the value to filter by: ");
+                String value = input.next();
+                Student.browseOpportunities(criteria, value);
+            }
+            else {
                 System.out.println("Thank you, visit us again");
             }
         } while (!choose.equalsIgnoreCase("E"));
