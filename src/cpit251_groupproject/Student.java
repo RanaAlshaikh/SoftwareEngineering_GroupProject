@@ -13,23 +13,35 @@ import java.util.Scanner;
 public class Student {
 
     private String name;
-    private String studentId;
+    private int studentId;
+    private String studentEmail;
+    private int password;
     private List<VolunteerOpprtunity> appliedOpportunities;
 
-    public Student(String name, String studentId) {
+    public Student(String name, int studentId) {
         this.name = name;
         this.studentId = studentId;
         this.appliedOpportunities = new ArrayList<>();
     }
 
+     public Student(String name, int studentId , String studentEmail, int password) {
+        this.name = name;
+        this.studentId = studentId;
+        this.studentEmail = studentEmail;
+        this.password = password;
+        this.appliedOpportunities = new ArrayList<>();
+    }
+
+     
     public void applyForOpportunity() {
 
         Scanner input = new Scanner(System.in);
-        System.out.println("Available Opportunities:");
-        for (int i = 0; i < Administrator.Addopprtunity.size(); i++) {
+     
+            for (int i = 0; i < Administrator.Addopprtunity.size(); i++) {
             VolunteerOpprtunity opportunity = Administrator.Addopprtunity.get(i);
-            System.out.println((i + 1) + ". " + opportunity.toString());
-        }
+            System.out.println((i + 1) + ". " + opportunity.toString());  
+         }
+        
         System.out.print("Enter the number of the opportunity you want to apply for: ");
         int choice = input.nextInt();
         int opportunityIndex = choice - 1;
@@ -45,7 +57,7 @@ public class Student {
         } else {
             System.out.println("Invalid choice.");
         }
-
+       
     }
 
     // Getters and setters for name, studentId, and appliedOpportunities
@@ -57,12 +69,29 @@ public class Student {
         this.name = name;
     }
 
-    public String getStudentId() {
+    public int getStudentId() {
         return studentId;
     }
 
-    public void setStudentId(String studentId) {
+    public void setStudentId(int studentId) {
         this.studentId = studentId;
+    }
+
+    public String getStudentEmail() {
+        return studentEmail;
+    }
+
+    public int getPassword() {
+        return password;
+    }
+
+    public void setPassword(int password) {
+        this.password = password;
+    }
+    
+
+    public void setStudentEmail(String studentEmail) {
+        this.studentEmail = studentEmail;
     }
 
     public List<VolunteerOpprtunity> getAppliedOpportunities() {
@@ -107,5 +136,14 @@ public class Student {
             System.out.println("No matching opportunities found.");
         }
     }
+    
+          
+
+    @Override
+    public String toString() {
+        return "\nProfile \n" + "Name: " + name + "     Student ID: " + studentId  +"     Student Email: " + studentEmail+ "     Password: " + password;
+    }
+    
+    
 
 }

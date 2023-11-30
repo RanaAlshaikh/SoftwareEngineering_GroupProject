@@ -18,6 +18,8 @@ public class VolunteerOpprtunity {
     private String location;
     //walaa
     private int availableSpots;
+    
+    
 
     public VolunteerOpprtunity(String name, int availableSpots) {
         this.name = name;
@@ -112,7 +114,9 @@ public class VolunteerOpprtunity {
     public void Date() {
 
     }
+    
 
+  
     @Override
     public String toString() {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
