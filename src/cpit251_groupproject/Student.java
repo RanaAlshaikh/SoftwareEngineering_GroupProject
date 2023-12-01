@@ -101,42 +101,6 @@ public class Student {
     public void setAppliedOpportunities(List<VolunteerOpprtunity> appliedOpportunities) {
         this.appliedOpportunities = appliedOpportunities;
     }
-    public static void browseOpportunitiesol(String criteria, String value) {
-        boolean found = false;
-        for (VolunteerOpprtunity opportunity : Addopprtunity) {
-            switch (criteria.toLowerCase()) {
-                case "organization":
-                    if (opportunity.getOrganization_name().toLowerCase().contains(value.toLowerCase())) {
-                        System.out.println(opportunity.toString());
-                        found = true;
-                    }
-                    break;
-                case "available spots":
-                    if (opportunity.getAvailableSpots() >= Integer.parseInt(value)) {
-                        System.out.println(opportunity.toString());
-                        found = true;
-                    }
-                    break;
-            }
-        }
-        if (!found) {
-            System.out.println("No matching opportunities found.");
-        }
-    }
-    public static void searchOpportunityol(String searchKeyword) {
-        boolean found = false;
-        for (VolunteerOpprtunity opportunity : Addopprtunity) {
-            if (opportunity.getName().toLowerCase().contains(searchKeyword.toLowerCase())) {
-                System.out.println("Matching Opportunity Found:");
-                System.out.println(opportunity.toString());
-                found = true;
-            }
-        }
-        if (!found) {
-            System.out.println("No matching opportunities found.");
-        }
-    }
-    
           
 
     @Override

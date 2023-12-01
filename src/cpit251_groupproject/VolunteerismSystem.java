@@ -150,18 +150,6 @@ public class VolunteerismSystem {
                 student.applyForOpportunity();
                 break;
                   }
-            case 3:
-                System.out.print("Enter the criteria (organization/available spots): ");
-                String criteria = input.next();
-                System.out.print("Enter the value to filter by: ");
-                String value = input.next();
-                Student.browseOpportunitiesol(criteria, value);
-                break;
-            case 4:
-                System.out.print("Enter the keyword to search for opportunities: ");
-                String searchKeyword = input.next();
-                Student.searchOpportunityol(searchKeyword);
-                break;
             case 5:
                 acc= false;
                 System.out.println();
