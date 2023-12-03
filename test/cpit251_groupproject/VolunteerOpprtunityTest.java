@@ -1,4 +1,5 @@
 package cpit251_groupproject;
+import cpit251_groupproject.VolunteerOpprtunity;
 import org.junit.Test;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
