@@ -101,6 +101,7 @@ public class Student {
     public void setAppliedOpportunities(List<VolunteerOpprtunity> appliedOpportunities) {
         this.appliedOpportunities = appliedOpportunities;
     }
+    //Manar
     public static void browseOpportunities(String criteria, String value) {
         boolean found = false;
         for (VolunteerOpprtunity opportunity : Addopprtunity) {
@@ -123,6 +124,7 @@ public class Student {
             System.out.println("No matching opportunities found.");
         }
     }
+    //Manar
     public static void searchOpportunity(String searchKeyword) {
         boolean found = false;
         for (VolunteerOpprtunity opportunity : Addopprtunity) {

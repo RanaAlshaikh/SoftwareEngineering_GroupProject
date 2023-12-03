@@ -150,6 +150,7 @@ public class VolunteerismSystem {
                 student.applyForOpportunity();
                 break;
                   }
+               //Manar
                case 3:
                    System.out.print("Enter the criteria (organization/available spots): ");
                    String criteria = input.next();
