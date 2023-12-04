@@ -23,6 +23,9 @@ public class Student {
         this.studentId = studentId;
         this.appliedOpportunities = new ArrayList<>();
     }
+    public Student(){
+        
+    }
 
      public Student(String name, int studentId , String studentEmail, int password) {
         this.name = name;
