@@ -205,24 +205,56 @@ public class StudentTest {
         assertEquals(appliedOpportunities, result);
     }
 
-    /**
-     * Test of browseOpportunities method, of class Student.
-     */
-//    @Test
-//    public void testBrowseOpportunities() {
-//        System.out.println("browseOpportunities");
-//        
-//
-//    }
-    /**
-     * Test of searchOpportunity method, of class Student.
-     */
-//    @Test
-//    public void testSearchOpportunity() {
-//        System.out.println("searchOpportunity");
-//        
-//
-//    }
+    @Test
+    public void testBrowseOpportunitiesByOrganization() {
+        // Create some sample opportunities
+        VolunteerOpprtunity opportunity1 = new VolunteerOpprtunity("Opportunity 1", 10);
+        VolunteerOpprtunity opportunity2 = new VolunteerOpprtunity("Opportunity 2", 5);
+
+        // Add opportunities to the list
+        Administrator.Addopprtunity.add(opportunity1);
+        Administrator.Addopprtunity.add(opportunity2);
+
+        // Perform browsing by organization
+        Student.browseOpportunities("organization", "Org1");
+
+        // Check if the output matches the expected result
+        assertEquals("Opportunity 1", opportunity1.getName());
+    }
+
+    @Test
+    public void testBrowseOpportunitiesByAvailableSpots() {
+        // Create some sample opportunities
+        VolunteerOpprtunity opportunity1 = new VolunteerOpprtunity("Opportunity 1", 10);
+        VolunteerOpprtunity opportunity2 = new VolunteerOpprtunity("Opportunity 2",  5);
+
+        // Add opportunities to the list
+        Administrator.Addopprtunity.add(opportunity1);
+        Administrator.Addopprtunity.add(opportunity2);
+
+        // Perform browsing by available spots
+        Student.browseOpportunities("available spots", "7");
+
+        // Check if the output matches the expected result
+        assertEquals("Opportunity 1", opportunity1.getName());
+    }
+
+    @Test
+    public void testSearchOpportunity() {
+        // Create some sample opportunities
+        VolunteerOpprtunity opportunity1 = new VolunteerOpprtunity("Opportunity 1", 10);
+        VolunteerOpprtunity opportunity2 = new VolunteerOpprtunity("Opportunity 2",  5);
+
+        // Add opportunities to the list
+        Administrator.Addopprtunity.add(opportunity1);
+        Administrator.Addopprtunity.add(opportunity2);
+
+        // Perform searching by opportunity name
+        Student.searchOpportunity("Opportunity 2");
+
+        // Check if the output matches the expected result
+        assertEquals("Opportunity 2", opportunity2.getName());
+    }
 
     /**
      * Test of toString method, of class Student.

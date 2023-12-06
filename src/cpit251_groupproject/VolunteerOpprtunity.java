@@ -10,21 +10,22 @@ import java.util.Date;
 public class VolunteerOpprtunity {
 
     private String name;
-    private Date StartDate;
-    private Date EndDate;
+    private Date StartDate = new Date();;
+    private Date EndDate = new Date();;
     private String time;
-    private String Organization_name;
-    private int Volunteers_number;
+    private String Organization_name = "Tablen";
+    private int Volunteers_number = 10;
     private String location;
     //walaa
     private int availableSpots;
-    
-    
+
 
     public VolunteerOpprtunity(String name, int availableSpots) {
         this.name = name;
         this.availableSpots = availableSpots;
     }
+
+
 
     public void reduceAvailableSpots() {
         availableSpots--;
