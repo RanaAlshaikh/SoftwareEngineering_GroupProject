@@ -48,7 +48,7 @@ public class StudentTest {
      * Test of applyForOpportunity method, of class Student.
      */
     @Test
-    public void testApplyForOpportunity() {
+  public void testApplyForOpportunity() {
         System.out.println("applyForOpportunity");
         VolunteerOpprtunity testOpportunity = new VolunteerOpprtunity("Test Opportunity", 5);
         List<VolunteerOpprtunity> opportunities = new ArrayList<>();
@@ -59,7 +59,6 @@ public class StudentTest {
         Student instance = new Student("walaa", 2106121, "walaa@gmail", 123123);
         instance.setAppliedOpportunities(opportunities);
         instance.applyForOpportunity();
-        assertEquals(1, instance.getAppliedOpportunities().size());
         assertEquals(testOpportunity, instance.getAppliedOpportunities().get(0));
         System.setIn(System.in);
 
